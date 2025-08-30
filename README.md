@@ -86,26 +86,51 @@ student-performance-tracker/
 │   ├── search.html
 │── static/             # CSS, images, JS
 │   └── style.css
-# 🔄 Workflow  
+# Workflow
+opens the website.
+Navigates to Add Student → fills roll no, name, subject(s), marks.
+Data gets stored in SQLite database.
+Teacher can View Student List with all records.
+Teacher can Update/Delete entries when needed.
+requirements.txt
+This file lists all Python dependencies your app needs:
+Flask==3.0.3
+Jinja2==3.1.4
+Werkzeug==3.0.3
+itsdangerous==2.2.0
+click==8.1.7
+gunicorn==23.0.0
+Procfile
+This tells Heroku/Render how to run your app: web: gunicorn app:app
 
-1. Teacher **opens the website**.  
-2. Navigates to **Add Student** → enters roll number, name, subjects, and marks.  
-3. Data gets stored in **SQLite database**.  
-4. Teacher can **View Student List** with averages.  
-5. Teacher can **Update / Delete** entries.  
-6. Teacher can view **Toppers & Class Average**.  
-7. Data can also be **exported to CSV backup**.  
-
----
-
-# ⚙️ Installation & Setup  
-
-### 1️⃣ Clone the Repository  
-```bash
-git clone https://github.com/Nagalakshmi-NU/Student-performance-tracker.git
-cd Student-performance-tracker
-### 2️⃣ Create Virtual Environment  
-
-Run the following command to create a virtual environment:  
-```bash
+#Installation & Setup
+1. Clone the repository
+git clone https://github.com/bhagyasreeganuga/student-performance-tracker.git
+cd student-performance-tracker
+2. Create environment
 python -m venv venv
+venv\Scripts\activate # Windows
+source venv/bin/activate # Mac/Linux
+3. Install dependencies
+pip install -r requirements.txt
+4. Run the apllication locally
+python app.py
+5. Database Setup
+The SQLite database (students.db) will be auto-created when you first run app.py.
+Deployment
+Push to GitHub
+Use Heroku/Render for free deployment
+Heroku Deployment
+1.Login to Heroku
+2.heroku login
+3.Create app
+heroku create student-performance-tracker
+Push code
+git add .
+git commit -m "Initial commit"
+git push heroku main
+Open app in browser
+heroku open
+Author
+Bhagya Sree G
+Vault Of Codes Internship Project
