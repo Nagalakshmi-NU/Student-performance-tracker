@@ -87,6 +87,55 @@ student-performance-tracker/
 │── static/             # CSS, images, JS
 │   └── style.css
 
+- Calculating subject-wise toppers
+-Calculating overall average of each student
+-Displaying Obverall Topper
+The project uses **SQLite** for database storage and can be deployed to **Heroku / Railway / Render** for online access.  
+
+## ✨ Features  
+
+- 👩‍🎓 **Add Students**  
+  Register students with **Roll Number** & **Name**  
+
+- 📚 **Subject & Marks Entry**  
+  Enter **multiple subjects** with marks (**0–100**)  
+
+- 🏆 **Topper Highlight**  
+  Display **subject-wise toppers** (only one per subject)  
+
+- 📊 **Performance Analysis**  
+  Show each student’s **overall average**  
+
+- 💾 **Persistent Storage**  
+  Store data securely with **SQLite database**  
+
+- 🌐 **Deployment Ready**  
+  Easily deploy on **Heroku / Render / Vercel**  
+  
+# Tech Stack  
+- **Backend**: Python (Flask)  
+- **Database**: SQLite (can be extended to MySQL/PostgreSQL)  
+- **Frontend**: HTML, CSS, Jinja2 templates  
+- **Deployment**: Heroku / Render / Railway
+
+# Project Structure
+
+```bash
+student-performance-tracker/
+│── app.py # Flask application
+│── requirements.txt # Python dependencies
+│── Procfile # Deployment configuration (Heroku)
+│── README.md # Project documentation
+│── students.db # SQLite database (auto-created)
+│── templates/ # HTML templates
+│ ├── index.html
+│ ├── add_student.html
+│ ├── view_students.html
+│ ├── subject_toppers.html
+│ ├── overall_toppers.html
+│── static/ # CSS, images, JS (optional)
+```
+
 # Workflow
 - **opens the website**.
 - **Navigates to Add Student → fills roll no, name, subject(s), marks**.
