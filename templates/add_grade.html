@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Add / Update Grade</h2>
+<form method="post" class="row g-3">
+  <div class="col-md-6">
+    <label class="form-label">Select Student</label>
+    <select name="roll_number" class="form-control" required>
+      <option value="">-- choose --</option>
+      {% for s in students %}
+      <option value="{{ s.roll_number }}">{{ s.roll_number }} - {{ s.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="col-md-4">
+    <label class="form-label">Subject</label>
+    <input name="subject" class="form-control" placeholder="Math / Science / English" required>
+  </div>
+  <div class="col-md-2">
+    <label class="form-label">Score (0-100)</label>
+    <input name="score" type="number" step="0.01" min="0" max="100" class="form-control" required>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-success">Save Grade</button>
+  </div>
+</form>
+{% endblock %}

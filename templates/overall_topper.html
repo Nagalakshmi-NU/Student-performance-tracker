@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Overall Topper</h2>
+{% if topper %}
+  <div class="card p-3">
+    <p><strong>Name:</strong> {{ topper.name }}</p>
+    <p><strong>Roll:</strong> {{ topper.roll_number }}</p>
+    <p><strong>Average:</strong> {{ '%.2f'|format(topper.average()) }}</p>
+  </div>
+{% else %}
+  <p>No students available.</p>
+{% endif %}
+{% endblock %}

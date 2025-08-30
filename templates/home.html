@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="p-4 text-center bg-light rounded-3">
+  <h1 class="display-6">Student Performance Tracker</h1>
+  <p class="lead">Add students, record grades, view details, compute averages, and see toppers.</p>
+  <a href="{{ url_for('list_students') }}" class="btn btn-primary btn-lg">View Students</a>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Student: {{ student.name }} ({{ student.roll_number }})</h2>
+{% if student.grades %}
+<table class="table table-bordered">
+  <thead><tr><th>Subject</th><th>Score</th></tr></thead>
+  <tbody>
+    {% for sub, score in student.grades.items() %}
+    <tr><td>{{ sub }}</td><td>{{ score }}</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+<p><strong>Average:</strong> {{ '%.2f'|format(average) if average is not none else '—' }}</p>
+{% else %}
+<p>No grades yet.</p>
+{% endif %}
+<a class="btn btn-outline-secondary" href="{{ url_for('add_grade') }}">Add Grade</a>
+{% endblock %}

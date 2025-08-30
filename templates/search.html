@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Search Student by Roll Number</h2>
+<form method="post" class="row g-3 mb-3">
+  <div class="col-md-6">
+    <label class="form-label">Roll Number</label>
+    <input name="roll_number" class="form-control" required>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary">Search</button>
+  </div>
+</form>
+
+{% if student %}
+  <h3>Result</h3>
+  <p><strong>Name:</strong> {{ student.name }}</p>
+  <p><strong>Roll:</strong> {{ student.roll_number }}</p>
+  <p><strong>Average:</strong> {{ '%.2f'|format(student.average()) if student.average() is not none else '—' }}</p>
+  {% if student.grades %}
+  <table class="table">
+    <thead><tr><th>Subject</th><th>Score</th></tr></thead>
+    <tbody>
+      {% for sub, score in student.grades.items() %}
+      <tr><td>{{ sub }}</td><td>{{ score }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+{% endif %}
+{% endblock %}
