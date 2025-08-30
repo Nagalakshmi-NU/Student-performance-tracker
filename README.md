@@ -86,3 +86,26 @@ student-performance-tracker/
 │   ├── search.html
 │── static/             # CSS, images, JS
 │   └── style.css
+# 🔄 Workflow  
+
+1. Teacher **opens the website**.  
+2. Navigates to **Add Student** → enters roll number, name, subjects, and marks.  
+3. Data gets stored in **SQLite database**.  
+4. Teacher can **View Student List** with averages.  
+5. Teacher can **Update / Delete** entries.  
+6. Teacher can view **Toppers & Class Average**.  
+7. Data can also be **exported to CSV backup**.  
+
+---
+
+# ⚙️ Installation & Setup  
+
+### 1️⃣ Clone the Repository  
+```bash
+git clone https://github.com/Nagalakshmi-NU/Student-performance-tracker.git
+cd Student-performance-tracker
+### 2️⃣ Create Virtual Environment  
+
+Run the following command to create a virtual environment:  
+```bash
+python -m venv venv
