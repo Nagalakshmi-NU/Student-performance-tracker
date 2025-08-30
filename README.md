@@ -86,62 +86,16 @@ student-performance-tracker/
 │   ├── search.html
 │── static/             # CSS, images, JS
 │   └── style.css
-
-- Calculating subject-wise toppers
--Calculating overall average of each student
--Displaying Obverall Topper
-The project uses **SQLite** for database storage and can be deployed to **Heroku / Railway / Render** for online access.  
-
-## ✨ Features  
-
-- 👩‍🎓 **Add Students**  
-  Register students with **Roll Number** & **Name**  
-
-- 📚 **Subject & Marks Entry**  
-  Enter **multiple subjects** with marks (**0–100**)  
-
-- 🏆 **Topper Highlight**  
-  Display **subject-wise toppers** (only one per subject)  
-
-- 📊 **Performance Analysis**  
-  Show each student’s **overall average**  
-
-- 💾 **Persistent Storage**  
-  Store data securely with **SQLite database**  
-
-- 🌐 **Deployment Ready**  
-  Easily deploy on **Heroku / Render / Vercel**  
-  
-# Tech Stack  
-- **Backend**: Python (Flask)  
-- **Database**: SQLite (can be extended to MySQL/PostgreSQL)  
-- **Frontend**: HTML, CSS, Jinja2 templates  
-- **Deployment**: Heroku / Render / Railway
-
-# Project Structure
-
-```bash
-student-performance-tracker/
-│── app.py # Flask application
-│── requirements.txt # Python dependencies
-│── Procfile # Deployment configuration (Heroku)
-│── README.md # Project documentation
-│── students.db # SQLite database (auto-created)
-│── templates/ # HTML templates
-│ ├── index.html
-│ ├── add_student.html
-│ ├── view_students.html
-│ ├── subject_toppers.html
-│ ├── overall_toppers.html
-│── static/ # CSS, images, JS (optional)
 ```
+# 🔄 Workflow  
 
-# Workflow
-- **opens the website**.
-- **Navigates to Add Student → fills roll no, name, subject(s), marks**.
-- **Data gets stored in SQLite database**.
-- **Teacher can View Student List with all records**.
-- **Teacher can Update/Delete entries when needed**.
+1. Teacher **opens the website**.  
+2. Navigates to **Add Student** → enters roll number, name, subjects, and marks.  
+3. Data gets stored in **SQLite database**.  
+4. Teacher can **View Student List** with averages.  
+5. Teacher can **Update / Delete** entries.  
+6. Teacher can view **Toppers & Class Average**.  
+7. Data can also be **exported to CSV backup**.  
 
 ## requirements.txt
 - **This file lists all Python dependencies your app needs**:
@@ -159,8 +113,9 @@ web: gunicorn app:app
 # Installation & Setup  
 ### 1. Clone the repository  
 
-- **git clone https://github.com/bhagyasreeganuga/student-performance-tracker.git**
-- **cd student-performance-tracker**
+- **git clone https://github.com/Nagalakshmi-NU/Student-performance-tracker.git**
+  **cd Student-performance-tracker**
+
 
 ### 2. Create environment
 - **python -m venv venv**
@@ -175,6 +130,7 @@ web: gunicorn app:app
 
 ### 5. Database Setup
 - **The SQLite database (students.db) will be auto-created when you first run app.py.**
+- **CSV backup will be available as students_export.csv.**
 
 ### Deployment
 - **Push to GitHub**
@@ -192,5 +148,5 @@ web: gunicorn app:app
 - **heroku open**
 
 ### Author
-- **Bhagya Sree G**
+- **Nagalakshmi N U**
 - **Vault Of Codes Internship Project**
