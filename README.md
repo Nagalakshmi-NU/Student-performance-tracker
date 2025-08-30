@@ -99,12 +99,10 @@ student-performance-tracker/
 
 ## requirements.txt
 - **This file lists all Python dependencies your app needs**:
-- **Flask==3.0.3**
-- **Jinja2==3.1.4**
-- **Werkzeug==3.0.3**
-- **itsdangerous==2.2.0**
-- **click==8.1.7**
-- **gunicorn==23.0.0**
+-**Flask==2.2.5**
+-**Flask-SQLAlchemy==2.5.1**
+-**SQLAlchemy==1.4.46**
+-**gunicorn==20.1.0**
 
 ## Procfile
 This tells Heroku/Render how to run your app:
