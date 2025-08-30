@@ -112,7 +112,7 @@ web: gunicorn app:app
 ### 1. Clone the repository  
 
 - **git clone https://github.com/Nagalakshmi-NU/Student-performance-tracker.git**
-  **cd Student-performance-tracker**
+-**cd Student-performance-tracker**
 
 
 ### 2. Create environment
